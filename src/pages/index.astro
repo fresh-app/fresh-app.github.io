@@ -1,75 +1,187 @@
 ---
-import { Content as TourContent } from "../content/Tour.md";
-import Logo from "../components/Logo.astro";
 import "../styles/global.css";
 import "../styles/home.css";
 /* ASTRO:COMPONENT_IMPORTS */
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = "My Astro Site";
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+let title = "Fresh App Factory";
+let sections = [
+	{
+		title: 'Astro',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-astro-project', title: 'Astro Project' },
+				]
+			}
+		]
+	},
+	{
+		title: 'Create React App',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-react-app', title: 'React App' },
+					{ name: 'fresh-react-app-typescript', title: '+ TypeScript' },
+				]
+			}
+		]
+	},
+	{
+		title: 'Next.js',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-next-app', title: 'Next.js App' },
+					{ name: 'fresh-next-app-typescript', title: '+ TypeScript' },
+				]
+			}
+		]
+	},
+	{
+		title: 'Redwood',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-redwood-app', title: 'Redwood App' },
+					{ name: 'fresh-redwood-app-typescript', title: '+ TypeScript' },
+				]
+			}
+		]
+	},
+	{
+		title: 'Remix',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-remix-app', title: 'Remix App' },
+					{ name: 'fresh-remix-app-typescript', title: '+ Vercel Deployment' },
+				]
+			}
+		]
+	},
+	{
+		title: 'Rush',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-rush-monorepo', title: 'Rush Monorepo' },
+				]
+			}
+		]
+	},
+	{
+		title: 'TSDX',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-tsdx-lib', title: 'TypeScript Library' },
+				]
+			},
+			{
+				items: [
+					{ name: 'fresh-tsdx-react-component', title: 'React Component Library' },
+					{ name: 'fresh-tsdx-react-component-with-storybook', title: '+ Storybook' },
+				]
+			}
+		]
+	},
+	{
+		title: 'Vite',
+		lines: [
+			{
+				items: [
+					{ name: 'fresh-vite-app', title: 'Vanilla JS App' },
+					{ name: 'fresh-vite-app-ts', title: '+ TypeScript' },
+				]
+			},
+			{
+				items: [
+					{ name: 'fresh-vite-app-lit-element', title: 'Lit App' },
+					{ name: 'fresh-vite-app-lit-element-ts', title: '+ TypeScript' },
+				]
+			},
+			{
+				items: [
+					{ name: 'fresh-vite-app-preact', title: 'Preact App' },
+					{ name: 'fresh-vite-app-preact-ts', title: '+ TypeScript' },
+				]
+			},
+			{
+				items: [
+					{ name: 'fresh-vite-app-react', title: 'React App' },
+					{ name: 'fresh-vite-app-react-ts', title: '+ TypeScript' },
+				]
+			},
+			{
+				items: [
+					{ name: 'fresh-vite-app-svelte', title: 'Svelte App' },
+					{ name: 'fresh-vite-app-svelte-ts', title: '+ TypeScript' },
+				]
+			},
+			{
+				items: [
+					{ name: 'fresh-vite-app-vue', title: 'Vue App' },
+					{ name: 'fresh-vite-app-vue-ts', title: '+ TypeScript' },
+				]
+			}
+		]
+	}
+]
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{title}</title>
 
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{title}</title>
 
-		<style>
-			header {
-				display: flex;
-				flex-direction: column;
-				gap: 1em;
-				max-width: min(100%, 68ch);
-			}
-			article {
-				padding-top: 2em;
-				line-height: 1.5;
-				display: flex;
-				flex-direction: column;
-				gap: 1em;
-				max-width: 70ch;
-			}
-			.banner {
-				text-align: center;
-				font-size: 1.2rem;
-				background: var(--color-light);
-				padding: 1em 1.5em;
-				padding-left: 0.75em;
-				border-radius: 4px;
-			}
-		</style>
-		<style is:global>
-			pre {
-				padding: 1rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<header>
-				<div>
-					<Logo width={60} height={80} />
-					<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-				</div>
-			</header>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-			<article>
-				<div class="banner">
-					<p><strong>🧑‍🚀 Seasoned astronaut?</strong> Delete this template and have fun!</p>
-				</div>
-				<TourContent />
-			</article>
+	<style>
+		header {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			max-width: min(100%, 68ch);
+		}
 
-			<!--
+
+		.g {
+			display: inline-block;
+			padding: 0.5ex 0.8ex;
+			text-decoration: none;
+			border: 1px solid #fff4;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<header>
+			<div>
+				<h1>Fresh App Factory</h1>
+			</div>
+		</header>
+
+		<table class="t">
+			{sections.flatMap(section => {
+			return (
+			section.lines.map((line, i) => {
+			return <tr>
+				{i === 0 && <td rowspan={section.lines.length}>{section.title}</td>}
+				<td>
+					{line.items.map(item => {
+					return <span> <a class="g" href={`https://github.com/fresh-app/${item.name}/generate`}>{item.title}</a></span>
+					})}
+				</td>
+			</tr>
+			})
+			)
+			})}
+		</table>
+		<!--
 
 		You can also use imported framework components directly in your markup!
 		
@@ -80,7 +192,8 @@ let title = "My Astro Site";
 
 		-->
 
-			<!-- ASTRO:COMPONENT_MARKUP -->
-		</main>
-	</body>
+		<!-- ASTRO:COMPONENT_MARKUP -->
+	</main>
+</body>
+
 </html>
