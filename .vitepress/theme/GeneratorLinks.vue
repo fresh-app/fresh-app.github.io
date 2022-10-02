@@ -1,8 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
-import { useData } from 'vitepress'
 
-const { page } = useData()
+const props = defineProps<{
+  name: string
+}>()
 </script>
 
 <template>
@@ -11,13 +12,13 @@ const { page } = useData()
       tag="a"
       theme="brand"
       text="Use this template"
-      :href="`https://github.com/fresh-app/${page.frontmatter.result.generator}/generate`"
+      :href="`https://github.com/fresh-app/${props.name}/generate`"
     />
     <VPButton
       tag="a"
       theme="alt"
       text="View on GitHub"
-      :href="`https://github.com/fresh-app/${page.frontmatter.result.generator}`"
+      :href="`https://github.com/fresh-app/${props.name}`"
     />
   </div>
 </template>

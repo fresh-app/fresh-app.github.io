@@ -13,6 +13,7 @@
   "dependencies": {
     "@types/glob": "^8.0.0",
     "@types/node": "^18.7.23",
+    "@vscode/codicons": "^0.0.32",
     "ansi-to-html": "^0.7.2",
     "glob": "^8.0.3"
   }

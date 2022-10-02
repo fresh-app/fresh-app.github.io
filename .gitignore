@@ -27,3 +27,6 @@ TODOs.md
 
 .data
 fresh-*.md
+
+.vitepress/sidebar.json
+.vitepress/list.json

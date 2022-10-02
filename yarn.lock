@@ -358,6 +358,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vscode/codicons@npm:^0.0.32":
+  version: 0.0.32
+  resolution: "@vscode/codicons@npm:0.0.32"
+  checksum: 712f423becae23591397ccc44ca9056eb413d1e00e6b2cad88895b3d97368ecee0a73da51dc40c0c65e7bc5fef2b3db5544a809c21806c6db85c9308c782814e
+  languageName: node
+  linkType: hard
+
 "@vue/compiler-core@npm:3.2.40":
   version: 3.2.40
   resolution: "@vue/compiler-core@npm:3.2.40"
@@ -1607,6 +1614,7 @@ __metadata:
   dependencies:
     "@types/glob": ^8.0.0
     "@types/node": ^18.7.23
+    "@vscode/codicons": ^0.0.32
     ansi-to-html: ^0.7.2
     glob: ^8.0.3
     tsx: ^3.9.0
