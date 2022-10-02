@@ -12,15 +12,16 @@ const html = computed(() => {
 </script>
 
 <template>
-  <pre><code v-html="html"></code></pre>
+  <pre wrap><code v-html="html"></code></pre>
 </template>
 
 <style scoped>
   pre {
     background: #090807;
     color: #e9e8e7;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 0.5em;
     overflow: auto;
+    font-size: 0.8em;
   }
 </style>
