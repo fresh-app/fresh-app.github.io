@@ -34,6 +34,10 @@ jobs:
         uses: actions/configure-pages@v1
       - name: Install Deps
         run: yarn
+      - name: Load results
+        run: yarn tsx scripts/load.ts
+      - name: Generate data files
+        run: yarn tsx scripts/generate.ts
       - name: Build
         run: yarn build
       - name: Upload artifact
