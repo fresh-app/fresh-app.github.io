@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {computed} from 'vue'
+import {escape} from 'lodash-es'
 import Convert from 'ansi-to-html';
 const  convert = new Convert();
 
@@ -7,7 +8,7 @@ const props = defineProps<{
   ansi: string
 }>()
 const html = computed(() => {
-  return convert.toHtml(props.ansi)
+  return convert.toHtml(escape(props.ansi))
 })
 </script>
 

@@ -1,11 +1,17 @@
 import { readFileSync, writeFileSync } from "fs";
 import glob from "glob";
+import { basename } from "path";
 
 const items: { text: string; link: string }[] = [];
 const list: {
   name: string;
   href: string;
+  screenshotAvailable: boolean;
 }[] = [];
+
+const screenshots = new Set(
+  glob.sync(".data/results/*.png").map((f) => basename(f, ".png"))
+);
 
 for (const f of glob.sync(".data/results/*.json")) {
   const result = JSON.parse(readFileSync(f, "utf8"));
@@ -31,6 +37,10 @@ for (const f of glob.sync(".data/results/*.json")) {
       "",
       "<GeneratorResult />",
       "",
+      screenshots.has(result.generator)
+        ? `## Screenshot\n![Screenshot](./.data/results/${result.generator}.png)`
+        : "",
+      "",
     ].join("\n")
   );
   items.push({
@@ -40,6 +50,7 @@ for (const f of glob.sync(".data/results/*.json")) {
   list.push({
     name: result.generator,
     href: `/${result.generator}.html`,
+    screenshotAvailable: screenshots.has(result.generator),
   });
 }
 

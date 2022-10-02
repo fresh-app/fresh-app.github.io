@@ -12,9 +12,11 @@
   "packageManager": "yarn@3.2.3",
   "dependencies": {
     "@types/glob": "^8.0.0",
+    "@types/lodash-es": "^4.17.6",
     "@types/node": "^18.7.23",
     "@vscode/codicons": "^0.0.32",
     "ansi-to-html": "^0.7.2",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "lodash-es": "^4.17.21"
   }
 }

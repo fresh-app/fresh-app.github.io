@@ -29,8 +29,11 @@
             <a :href="`https://github.com/fresh-app/${item.name}`" title="View repository" class="icon-link">
               <i class='codicon codicon-repo'></i>
             </a>
-            <a :href="`${item.href}#result`" title="View repository" class="icon-link">
+            <a :href="`${item.href}#result`" title="View terminal output" class="icon-link">
               <i class='codicon codicon-terminal'></i>
+            </a>
+            <a :href="`${item.href}#screenshot`" title="View screenshot" class="icon-link" v-if="item.screenshotAvailable">
+              <i class='codicon codicon-device-camera'></i>
             </a>
           </div>
         </td>
