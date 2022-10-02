@@ -11,6 +11,9 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
-    "@types/node": "^18.7.23"
+    "@types/glob": "^8.0.0",
+    "@types/node": "^18.7.23",
+    "ansi-to-html": "^0.7.2",
+    "glob": "^8.0.3"
   }
 }

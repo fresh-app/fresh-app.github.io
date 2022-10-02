@@ -1,1 +1,1 @@
-meow
+Check out the sidebar :)
