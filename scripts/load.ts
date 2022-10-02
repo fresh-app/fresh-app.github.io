@@ -6,5 +6,5 @@ const run = (command: string) => {
 
 run("mkdir -p .data/results");
 run(
-  "wget -O- https://github.com/fresh-app/results/archive/refs/heads/main.tar.gz | tar -xzv -C .data/results --strip-components=1 --include='*.json'"
+  "wget -O- https://github.com/fresh-app/results/archive/refs/heads/main.tar.gz | tar -xzv -C .data/results --strip-components=1"
 );
