@@ -1,14 +1,20 @@
 {
-  "name": "@example/starter",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
   "devDependencies": {
-    "astro": "^1.0.0-rc.3"
+    "tsx": "^3.9.0",
+    "vitepress": "^1.0.0-alpha.18",
+    "vue": "^3.2.40"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
+  "packageManager": "yarn@3.2.3",
+  "dependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/node": "^18.7.23",
+    "@vscode/codicons": "^0.0.32",
+    "ansi-to-html": "^0.7.2",
+    "glob": "^8.0.3"
   }
 }
