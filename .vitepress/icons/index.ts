@@ -8,6 +8,7 @@ import RemixDark from "./remix-dark.svg";
 import RemixLight from "./remix-light.svg";
 import RushDark from "./rush-dark.svg";
 import RushLight from "./rush-light.svg";
+import Solid from "./solid.svg";
 import Svelte from "./svelte.png";
 import T3 from "./t3.svg";
 import TSDX from "./tsdx.png";
@@ -36,6 +37,9 @@ function getIcon(name: string): string | [string, string] {
   }
   if (name.includes("rush")) {
     return [RushDark, RushLight];
+  }
+  if (name.includes("solid")) {
+    return Solid;
   }
   if (name.includes("sveltekit")) {
     return Svelte;
