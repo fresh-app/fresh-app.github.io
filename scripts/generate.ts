@@ -29,9 +29,11 @@ for (const f of glob.sync(".data/results/*.json")) {
       "---",
       "# " + result.generator,
       "",
-      result.description,
+      result.description.replace(/"([^"]+)"$/, "`$1`"),
       "",
-      `<GeneratorLinks name="${result.generator}" />`,
+      `<GeneratorLinks name="${result.generator}" docs="${
+        result.frameworkDocumentationUrl || ""
+      }" />`,
       "",
       "## Result",
       "",

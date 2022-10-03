@@ -3,6 +3,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
 
 const props = defineProps<{
   name: string
+  docs?: string
 }>()
 </script>
 
@@ -19,6 +20,13 @@ const props = defineProps<{
       theme="alt"
       text="View on GitHub"
       :href="`https://github.com/fresh-app/${props.name}`"
+    />
+    <VPButton
+      v-if="props.docs"
+      tag="a"
+      theme="alt"
+      text="Documentation"
+      :href="props.docs"
     />
   </div>
 </template>

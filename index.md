@@ -3,7 +3,7 @@ layout: home
 hero:
   name: Fresh App Factory
   text: Freshly-baked apps every midnight
-  tagline: Fresh App Factory generates template repositories from popular open-source app frameworks. Just click “Use this template” to get started.
+  tagline: Automatically-generated template repositories from popular open-source app frameworks
   actions:
     - theme: alt
       text: View on GitHub
