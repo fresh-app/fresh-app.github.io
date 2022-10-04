@@ -15,6 +15,7 @@ import TSDX from "./tsdx.png";
 import Vite from "./vite.svg";
 import VSCode from "./vscode.png";
 import Yarn from "./yarn.svg";
+import Turborepo from "./turborepo.svg";
 
 function getIcon(name: string): string | [string, string] {
   if (name.includes("astro")) {
@@ -58,6 +59,9 @@ function getIcon(name: string): string | [string, string] {
   }
   if (name.includes("yarn")) {
     return Yarn;
+  }
+  if (name.includes("turbo")) {
+    return Turborepo;
   }
   return "";
 }
