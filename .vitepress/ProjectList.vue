@@ -29,6 +29,9 @@
             <a :href="`https://github.com/fresh-app/${item.name}`" title="View repository" class="icon-link">
               <i class='codicon codicon-repo'></i>
             </a>
+            <a :href="`https://github.dev/fresh-app/${item.name}`" title="Open in github.dev" class="icon-link">
+              <i class='codicon codicon-code'></i>
+            </a>
             <a :href="`${item.href}#result`" title="View terminal output" class="icon-link">
               <i class='codicon codicon-terminal'></i>
             </a>
