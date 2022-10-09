@@ -1,5 +1,6 @@
 import AstroDark from "./astro-dark.svg";
 import AstroLight from "./astro-light.svg";
+import Docusaurus from "./docusaurus.svg";
 import Next from "./next.png";
 import Playwright from "./playwright.svg";
 import CRA from "./cra.svg";
@@ -62,6 +63,9 @@ function getIcon(name: string): string | [string, string] {
   }
   if (name.includes("turbo")) {
     return Turborepo;
+  }
+  if (name.includes("docusaurus")) {
+    return Docusaurus;
   }
   return "";
 }
