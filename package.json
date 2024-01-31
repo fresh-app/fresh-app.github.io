@@ -4,6 +4,7 @@
     "vitepress": "^1.0.0-alpha.18",
     "vue": "^3.2.40"
   },
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
